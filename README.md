@@ -1,4 +1,4 @@
-# Pikaradio | Pokemon Radio Player - Project Requirements
+# Pikaradio | Pokemon Radio Player
 
 ## 🎯 Project Overview
 
