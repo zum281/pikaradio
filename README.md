@@ -118,16 +118,14 @@ type AudioPlayerState = {
 - [x] Setup pnpm and install dependencies
 - [x] Configure Tailwind CSS
 - [x] Setup TypeScript path aliases (`@/components/*`, etc.)
-- [ ] Create basic TypeScript interfaces (`RadioStation`, `AudioPlayerState`)
-- [ ] Deploy empty app to Vercel
-- [ ] Test Radio Browser API in browser console
-- [ ] Create project folder structure
+- [x] Deploy empty app to Vercel
 
-### **Core Audio Engine (45 mins)**
+### **Core Audio Engine**
 
-- [ ] Create `useAudioPlayer` custom hook
+- [ ] Play a station
 - [ ] Implement play/pause functionality
 - [ ] Add volume control (0-100%)
+- [ ] Create `useAudioPlayer` custom hook
 - [ ] Handle stream loading states
 - [ ] Error handling for failed streams
 - [ ] Test with 2-3 Italian stations manually
