@@ -117,7 +117,7 @@ type AudioPlayerState = {
 - [x] Create Vite + React + TypeScript app
 - [x] Setup pnpm and install dependencies
 - [x] Configure Tailwind CSS
-- [ ] Setup TypeScript path aliases (`@/components/*`, etc.)
+- [x] Setup TypeScript path aliases (`@/components/*`, etc.)
 - [ ] Create basic TypeScript interfaces (`RadioStation`, `AudioPlayerState`)
 - [ ] Deploy empty app to Vercel
 - [ ] Test Radio Browser API in browser console
