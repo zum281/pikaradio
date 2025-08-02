@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Scene from "@/components/Scene";
-import Radio from "@/components/radio";
+import Radio from "@/components/Radio";
 
 const queryClient = new QueryClient();
 
