@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+* {
+  cursor: auto;
+}
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #09a7d5;
+  background-image:
+    url("../assets/backgrounds/nature_1/4.png"),
+    url("../assets/backgrounds/nature_1/6.png"),
+    url("../assets/backgrounds/nature_1/2.png"),
+    url("../assets/backgrounds/nature_1/8.png"),
+    url("../assets/backgrounds/nature_1/9.png"),
+    url("../assets/backgrounds/nature_1/5.png"),
+    url("../assets/backgrounds/nature_1/3.png"),
+    url("../assets/backgrounds/nature_1/10.png"),
+    url("../assets/backgrounds/nature_1/1.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
