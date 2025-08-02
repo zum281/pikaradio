@@ -11,7 +11,7 @@ const PikaMouse = () => {
         top: (mousePosition.y || 0) - 14,
         left: (mousePosition.x || 0) - 7,
       }}>
-      <img src={Pikachu} alt="Pikachu" width={24} height={28} />
+      <img src={Pikachu} alt="Pikachu" width={32} height={28} />
     </div>
   );
 };
