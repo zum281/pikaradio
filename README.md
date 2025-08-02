@@ -46,61 +46,6 @@ A cozy, pixel-art Pokemon-themed web radio player that streams internet radio st
 - **Number Keys 1-9** - Quick station select
 - **M** - Mute toggle (bonus)
 
-## 🏗️ **Technical Architecture**
-
-### **Component Structure**
-
-```
-src/
-├── components/
-│   ├── Radio/
-│   │   ├── RadioPlayer.tsx      // Main container
-│   │   ├── RadioControls.tsx    // Play/pause/volume
-│   │   ├── RadioDisplay.tsx     // Station info screen
-│   │   └── RadioDesign.tsx      // Pixel art radio shell
-│   └── Sidebar/
-│       ├── StationSidebar.tsx   // Main sidebar
-│       ├── StationList.tsx      // Station list per genre
-│       └── StationItem.tsx      // Individual station
-├── hooks/
-│   ├── useAudioPlayer.ts        // Audio control logic
-│   ├── useKeyboardControls.ts   // Keyboard shortcuts
-│   └── useStations.ts           // Station data management
-├── services/
-│   └── radioBrowserApi.ts       // API calls
-├── types/
-│   ├── station.ts               // Station interface definitions
-│   └── audio.ts                 // Audio player types
-└── styles/
-    └── pixel-art.css           // Custom retro styling
-```
-
-### **TypeScript Considerations**
-
-```typescript
-// Core types to implement
-type RadioStation = {
-  stationuuid: string;
-  name: string;
-  url_resolved: string;
-  homepage: string;
-  favicon: string;
-  tags: string;
-  country: string;
-  language: string;
-  bitrate: number;
-  codec: string;
-};
-
-type AudioPlayerState = {
-  isPlaying: boolean;
-  volume: number;
-  currentStation: RadioStation | null;
-  isLoading: boolean;
-  error: string | null;
-};
-```
-
 ### **Key Technical Considerations**
 
 | Risk                           | Impact | Mitigation                                 |
@@ -122,7 +67,7 @@ type AudioPlayerState = {
 
 ### **Core Audio Engine**
 
-- [ ] Play a station
+- [x] Play a station
 - [ ] Implement play/pause functionality
 - [ ] Add volume control (0-100%)
 - [ ] Create `useAudioPlayer` custom hook
@@ -132,7 +77,7 @@ type AudioPlayerState = {
 
 ### **Data Layer (30 mins)**
 
-- [ ] Create Radio Browser API service (`radioBrowserApi.js`)
+- [ ] Create Radio Browser API service
 - [ ] Fetch Italian Pop stations
 - [ ] Fetch Lo-fi stations
 - [ ] Create station data types/interfaces
@@ -154,16 +99,6 @@ type AudioPlayerState = {
 - [ ] Add visual feedback for keyboard actions
 - [ ] Test all shortcuts
 
-### **Pixel Art Polish (40 mins)**
-
-- [ ] Create retro radio design with CSS
-- [ ] Add pixel art borders and shadows
-- [ ] Cozy color palette (warm, soft colors)
-- [ ] Loading animations ("Tuning in...")
-- [ ] Basic hover effects
-
-**Total Estimated Time:** ~3.5 hours + 30min buffer
-
 ## 🎯 **Success Metrics (MVP)**
 
 ### **Must Have (Definition of Done)**
@@ -172,8 +107,6 @@ type AudioPlayerState = {
 - [ ] Volume control works (0-100%)
 - [ ] All keyboard shortcuts functional
 - [ ] Loads within 3 seconds
-- [ ] Works on Chrome, Firefox, Safari
-- [ ] Responsive on mobile
 
 ### **Nice to Have (V1.1)**
 
@@ -245,52 +178,6 @@ const lofiResponse = await fetch(
 const lofiStations = await lofiResponse.json();
 ```
 
-## 🎨 UI Components Breakdown
-
-### Main Radio Unit
-
-- Pixel art radio design
-- Play/pause button (center)
-- Volume slider/knob
-- Station display screen
-- "Now Playing" info
-
-### Sidebar Menu
-
-- Genre categories (Pop, Lo-fi)
-- Station list per category
-- Search/filter options
-- Station details (name, country, bitrate)
-
-### Control Elements
-
-- Previous/Next station buttons
-- Volume controls
-- Mute button
-- Loading indicators
-
-## 📋 MVP Checklist
-
-### Phase 1 (One Afternoon)
-
-- [ ] Basic React app setup
-- [ ] Radio Browser API integration
-- [ ] Simple audio playback functionality
-- [ ] Basic pixel art radio design
-- [ ] Station sidebar with Italian Pop/Lo-fi
-- [ ] Keyboard controls implementation
-- [ ] Play/pause/volume controls
-
-### Phase 2 (Future Iterations)
-
-- [ ] Enhanced pixel art design
-- [ ] Pokemon character elements
-- [ ] Pokeball play button
-- [ ] Station favorites/bookmarks
-- [ ] More genre categories
-- [ ] Advanced animations
-- [ ] Responsive mobile design
-
 ## 🔗 Useful Resources
 
 ### Radio Browser API
@@ -304,17 +191,3 @@ const lofiStations = await lofiResponse.json();
 - `chill`, `chillout`, `ambient`, `jazz`, `electronic`, `indie`, `alternative`
 - `italian` (for local content)
 - `hits`, `top40`, `dance`
-
-### Testing Stations
-
-- Test with multiple stations to ensure stream compatibility
-- Some stations may have CORS issues - have fallbacks ready
-- Check for both MP3 and AAC codec support
-
-## **Testing Checklist**
-
-- [ ] Test API calls in different browsers
-- [ ] Verify audio playback on mobile
-- [ ] Check keyboard shortcuts
-- [ ] Test with slow internet connection
-- [ ] Verify responsive design
