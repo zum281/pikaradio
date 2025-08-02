@@ -16,17 +16,18 @@ const Radio: FC = () => {
 
   if (!topRadioQuery.isFetched) return null;
   return (
-    <>
-      <img
-        src={topRadioQuery.data[0].favicon}
-        alt=""
-        role="presentation"
-        width={64}
-      />
-      {topRadioQuery.data[0].name}
-
+    <div className="rounded-sm m-4 p-4 grid place-content-center gap-4">
+      <div className="flex items-center gap-4">
+        <img
+          src={topRadioQuery.data[0].favicon}
+          alt=""
+          role="presentation"
+          width={32}
+        />
+        {topRadioQuery.data[0].name}
+      </div>
       <audio src={topRadioQuery.data[0].url_resolved} controls></audio>
-    </>
+    </div>
   );
 };
 

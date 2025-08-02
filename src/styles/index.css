@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 * {
-  cursor: auto;
+  cursor: none;
 }
 main {
   min-width: 100vw;
@@ -20,4 +20,21 @@ main {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom;
+}
+
+#button-close,
+#button-settings,
+#button-radio-stations {
+  background: none;
+  border: none;
+}
+
+#button-close:active img {
+  content: url("../assets/buttons/x_pressed.png");
+}
+#button-settings:active img {
+  content: url("../assets/buttons/settings3_pressed.png");
+}
+#button-radio-stations:active img {
+  content: url("../assets/buttons/settings1_pressed.png");
 }
