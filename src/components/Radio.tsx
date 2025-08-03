@@ -12,8 +12,6 @@ const Radio: FC = () => {
     queryFn: query,
   });
 
-  console.log(topRadioQuery.data);
-
   if (!topRadioQuery.isFetched) return null;
   return (
     <div className="rounded-sm m-4 p-4 grid place-content-center gap-4">
